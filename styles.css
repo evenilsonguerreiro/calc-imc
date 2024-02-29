@@ -47,6 +47,9 @@ button{
     color: white;
     font-weight: bold;
 }
+span{
+    font-weight: bold;
+}
 .button-btn{
     background-color:cornflowerblue;
 }

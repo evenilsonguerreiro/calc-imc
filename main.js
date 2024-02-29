@@ -1,6 +1,7 @@
 const Peso = document.querySelector('#input-peso')
 const Altura = document.querySelector('#input-altura')
 const res = document.querySelector('#res')
+const span = document.querySelector('span')
 
 const calcular = () => {
     if(Altura.value != '' && Peso.value != ''){
@@ -11,15 +12,20 @@ const calcular = () => {
             classification = 'Você esta abaixo do peso' 
         } else if(imc <25){
             classification = 'Peso normal'
+            span.style.color = 'green'
         } else if(imc <30){
             classification = 'Acima do peso'
+            span.style.color = 'yellow'
         } else if(imc < 35){
             classification = 'Obsidade grau I'
+            span.style.color = 'red'
         } else if(imc < 41){
             classification = 'Obsidade grau II'
+            span.style.color = 'red'
         } else {
             classification = 'Obsidade grau III'
-            res.classList.add('alerta')
+            span.style.color = 'red'
+            
         
         }
 
