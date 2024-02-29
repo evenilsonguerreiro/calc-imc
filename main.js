@@ -19,13 +19,14 @@ const calcular = () => {
             classification = 'Obsidade grau II'
         } else {
             classification = 'Obsidade grau III'
+            res.classList.add('alerta')
         
         }
 
         res.innerHTML = `IMC: ${imc} (${classification})`
         
     } else {
-        res.innerHTML = 'Preencha os campos '
+        alert('preencha os campos')
     }
         Peso.value = ''
         Altura.value = ''
